@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "pill-popper",
-    "slug": "pill-popper",
+    "name": "medication-reminder",
+    "slug": "medication-reminder",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

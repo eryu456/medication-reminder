@@ -34,7 +34,7 @@ export default function App() {
       pillPoppinTime &&
       formatTime(pillPoppinTime) === formatTime(currentTime)
     ) {
-      console.log(`it's pill poppin time!`);
+      console.log(`time to take your meds!`);
       // make arduino call here
     }
   });
@@ -66,14 +66,14 @@ export default function App() {
       />
       <View style={styles.buttonContainer}>
         <Button
-          title="set pill poppin time"
+          title="set reminder time"
           disabled={!parsedInputTimeValid}
           onPress={onPressSet}
         />
       </View>
       <View style={styles.buttonContainer}>
         <Button
-          title="clear pill poppin time"
+          title="clear reminder time"
           color="red"
           disabled={!pillPoppinTime}
           onPress={onPressClear}
@@ -81,8 +81,8 @@ export default function App() {
       </View>
       <Text style={{ ...styles.text, fontSize: 40 }}>
         {pillPoppinTime
-          ? `pills set to pop at ${formatTime(pillPoppinTime)}`
-          : `pills aint poppin`}
+          ? `reminder set at ${formatTime(pillPoppinTime)}`
+          : `no reminder set yet`}
       </Text>
       <Text style={{ ...styles.text, fontSize: 30 }}>
         current time: {formatTime(currentTime)}
